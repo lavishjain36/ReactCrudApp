@@ -1,29 +1,20 @@
 import React, { useState } from "react";
 
 const App = () => {
-  const purple = "green";
-  const [bg, setBg] = useState(purple);
-  const [name, setName] = useState("Click");
-  const bgChange = () => {
-    // console.log("Clicked");
+  let time = new Date().toLocaleTimeString();
 
-    let newBg = "khaki";
-    setBg(newBg);
-    setName("Lavish ");
+  const [ctime, setCtime] = useState(time);
+
+  const UpdateTime = () => {
+    time = new Date().toLocaleTimeString();
+    setCtime(time);
   };
 
-  const bgback = () => {
-    setBg(purple);
-    setName("Ohh");
-  };
-
+  setInterval(UpdateTime, 1000);
   return (
     <>
-      <div style={{ backgroundColor: bg }}>
-        <button onClick={bgChange} onDoubleClick={bgback}>
-          {name}{" "}
-        </button>
-      </div>
+      <h1>{ctime}</h1>
+      {/* <button onClick={UpdateTime}>Get Time</button> */}
     </>
   );
 };

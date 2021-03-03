@@ -22,21 +22,3 @@ div{
   justify-content: center;
   align-items: center;
 }
-
-h1{
-  color:white;
-  background:transparent;
-  text-shadow:black
-}
-
-
-button{
-  padding: 12px 20px;
-  background:purple;
-  color:white;
-  border: 2px solid whitesmoke;
-  outline: none;
-  border-radius:5px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
