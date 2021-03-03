@@ -1,22 +1,14 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 
-const App = () => {
-  let time = new Date().toLocaleTimeString();
+//Functional component
+// const Student = (props) => {
+//   return <h1>Hello Lavish {props.children} </h1>;
+// };
 
-  const [ctime, setCtime] = useState(time);
-
-  const UpdateTime = () => {
-    time = new Date().toLocaleTimeString();
-    setCtime(time);
-  };
-
-  setInterval(UpdateTime, 1000);
-  return (
-    <>
-      <h1>{ctime}</h1>
-      {/* <button onClick={UpdateTime}>Get Time</button> */}
-    </>
-  );
-};
-
+// Class component
+class App extends Component {
+  render() {
+    return <h1>Hello Lavish {this.props.children} </h1>;
+  }
+}
 export default App;
